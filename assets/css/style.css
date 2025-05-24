@@ -1963,6 +1963,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 0.95rem;
   line-height: 1.5;
   display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .paper-link {
