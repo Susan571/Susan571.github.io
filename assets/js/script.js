@@ -96,14 +96,20 @@ if (select) { // Check if select element exists
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
+// MODIFIED filterFunc
+const filterFunc = function (selectedValue) { // selectedValue is already lowercase, e.g., "open-world llms"
+  if (filterItems.length > 0) {
+    for (let i = 0; i < filterItems.length; i++) {
+      const itemCategory = filterItems[i].dataset.category; // Get the category from data-attribute, e.g., "Open-world LLMs"
+
+      if (selectedValue === "all") {
+        filterItems[i].classList.add("active");
+      } else if (itemCategory && selectedValue === itemCategory.toLowerCase()) {
+        // ^^^ Ensure itemCategory exists and compare its lowercase version with selectedValue
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].classList.remove("active");
+      }
     }
   }
 };

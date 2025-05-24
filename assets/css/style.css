@@ -1962,6 +1962,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--light-gray);
   font-size: 0.95rem;
   line-height: 1.5;
+  display: inline;
 }
 
 .paper-link {
