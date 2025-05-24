@@ -1044,9 +1044,12 @@ main {
 }
 
 .blog-post-item > a {
-  display: block;
-  text-decoration: none; /* Optional: common for card links */
-  color: inherit;       /* Optional: common for card links */
+  position: relative;
+  background: var(--border-gradient-onyx);
+  height: 100%;
+  box-shadow: var(--shadow-4);
+  border-radius: 16px;
+  z-index: 1;
 }
 
 .blog-post-item > a::before {
@@ -1062,8 +1065,7 @@ main {
   width: 100%;
   height: 200px;
   border-radius: 12px;
-  overflow: hidden;   /* This is supposed to prevent overflow! */
-  position: relative;
+  overflow: hidden;
 }
 
 .blog-banner-box img {
@@ -1954,12 +1956,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 .news-content time {
   color: var(--light-gray-70);
   font-size: 0.9rem;
-}
-
-.news-text span,
-.news-text a,
-.news-text a span { /* Target spans inside the link too */
-  display: inline !important; /* Force them back to inline */
 }
 
 .news-text {
