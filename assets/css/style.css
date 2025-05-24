@@ -109,6 +109,28 @@
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 
+  --bg-color: #181818;
+  --text-color: #f5f5f5;
+  --card-bg: #181818;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --card-border-radius: 12px;
+  --accent-color: var(--orange-yellow-crayola);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff;
+    --text-color: #181818;
+    --card-bg: #fff;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    --accent-color: #e6b800;
+  }
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--ff-poppins);
 }
 
 
@@ -155,7 +177,29 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+.blog-post-item {
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  color: var(--text-color);
+}
+
+.blog-title,
+.blog-item-title,
+.project-title,
+.project-category,
+.blog-meta,
+.blog-text,
+.news-title,
+.news-item-title,
+.news-text,
+.article-title,
+.h2,
+.h3,
+.h4,
+.h5 {
+  color: var(--text-color);
+}
 
 
 
