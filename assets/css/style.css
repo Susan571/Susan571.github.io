@@ -551,6 +551,18 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-text a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.about-text a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 
 
 /**
