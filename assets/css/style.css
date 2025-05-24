@@ -1956,6 +1956,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 0.9rem;
 }
 
+.news-text span,
+.news-text a,
+.news-text a span { /* Target spans inside the link too */
+  display: inline !important; /* Force them back to inline */
+}
+
 .news-text {
   color: var(--light-gray);
   font-size: 0.95rem;
