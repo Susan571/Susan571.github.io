@@ -1073,10 +1073,10 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: var(--transition-1);
+  /* transition: var(--transition-1); */ /* Comment out */
 }
 
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+/* .blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); } */ /* Comment out */
 
 .blog-content { padding: 15px; }
 
