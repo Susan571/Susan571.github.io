@@ -1972,7 +1972,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: var(--orange-yellow-crayola);
+  color: var(--light-gray);
   margin-top: 10px;
   transition: var(--transition-1);
 }
