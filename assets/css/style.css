@@ -170,6 +170,7 @@ input, textarea {
 
 strong {
   font-weight: 720 !important;
+  color: var(--text-color) !important;
 }
 
 ::selection {
