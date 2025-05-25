@@ -168,6 +168,11 @@ input, textarea {
   font: inherit;
 }
 
+strong {
+  font-weight: 800 !important;
+  color: #000000 !important;
+}
+
 ::selection {
   background: var(--orange-yellow-crayola);
   color: var(--smoky-black);
