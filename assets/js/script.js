@@ -163,8 +163,8 @@ const pages = document.querySelectorAll("[data-page]");
 if (navigationLinks.length > 0 && pages.length > 0) {
   navigationLinks.forEach(link => {
     link.addEventListener("click", function () {
-      const clickedLink = this; // The button that was clicked
-      const targetPageName = clickedLink.innerHTML.toLowerCase().trim(); // Or textContent
+      const clickedLink = this;
+      const targetPageName = clickedLink.innerHTML.toLowerCase().trim();
 
       // 1. Remove 'active' class from ALL navigation links
       navigationLinks.forEach(navLink => {
@@ -182,20 +182,24 @@ if (navigationLinks.length > 0 && pages.length > 0) {
       // 4. Add 'active' class to the CORRESPONDING page
       let pageFound = false;
       pages.forEach(page => {
-        if (page.dataset.page === targetPageName) {
+        // Special handling for "Publications" (previously "Blog")
+        if (targetPageName === "publications" && page.dataset.page === "blog") {
+          page.classList.add("active");
+          pageFound = true;
+        } else if (page.dataset.page === targetPageName) {
           page.classList.add("active");
           pageFound = true;
         }
       });
 
       if (!pageFound) {
-          console.warn(`Debug: Page with data-page="${targetPageName}" not found.`);
+        console.warn(`Debug: Page with data-page="${targetPageName}" not found.`);
       }
 
-      window.scrollTo(0, 0); // Optional: scroll to top of page
+      window.scrollTo(0, 0);
     });
   });
 } else {
-    if (navigationLinks.length === 0) console.warn("Debug: No navigation links found with [data-nav-link]. Page navigation will not work.");
-    if (pages.length === 0) console.warn("Debug: No pages found with [data-page]. Page navigation will not work.");
+  if (navigationLinks.length === 0) console.warn("Debug: No navigation links found with [data-nav-link]. Page navigation will not work.");
+  if (pages.length === 0) console.warn("Debug: No pages found with [data-page]. Page navigation will not work.");
 }
