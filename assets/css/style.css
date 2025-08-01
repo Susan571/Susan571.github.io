@@ -932,6 +932,10 @@ main {
   margin-bottom: 0;
 }
 
+.timeline-text ul li::marker {
+  color: var(--white-2);
+}
+
 
 /**
  * skills 
@@ -2000,6 +2004,21 @@ textarea.form-input::-webkit-resizer { display: none; }
 .news-list {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+.news-list li::marker {
+  color: var(--white-2);
+}
+
+.timeline-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.timeline-text ul li::marker {
+  color: var(--white-2);
 }
 
 .news-item {
