@@ -151,7 +151,7 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, a, button, time { display: block; }
 
 button {
   font: inherit;
@@ -2053,8 +2053,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-weight: var(--fw-300);
   line-height: 1.6;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
+}
+
+.news-text ion-icon {
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .paper-link {
