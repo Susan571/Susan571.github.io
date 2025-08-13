@@ -444,14 +444,11 @@
               <h4 class="h4 timeline-item-title">Development of Stock Investment System Based on Big Data Analysis and Statistical Optimization</h4>
               <span>May 2021 — July 2022</span>
               <p class="timeline-text">
-                Zhejiang University (Advisor: prof. Peng Zhang), Leading researcher
+                Zhejiang University (Advisor: prof. Peng Zhang)
               </p>
               <ul class="timeline-text">
-                <li>• Engineered a mid-frequency stock-trend forecasting framework for the CSI 300 & CSI 500 constituents (RSRS filter ➜ GBDT ➜ 4-state Gaussian HMM) on a 10-year, minute-bar corpus of 800+ Chinese equities, boosting directional hit-rate 52 → 67 %, with α = 8.4 %, Sharpe = 1.6, and max drawdown capped at -5.8 %.</li>
-                <li>• Curated 30+ technical, sector-beta, and macro features to detect market regime shifts, achieving stable cross-validated gains across rolling 3-year windows.</li>
-                <li>• Built a low-latency algo-trading platform (MATLAB UI + Java backend, Redis queue, JDBC risk ledger) delivering < 100 ms tick-to-execution, executing 1 k+ orders/day and supporting 1,500 concurrent orders on a two-node HA cluster (32 cores, 256 GB RAM).</li>
-                <li>• Scaled operations to ¥2 M (~$300 k) notional portfolio, eliminated manual-entry errors, and cut post-trade reconciliation time by 85 % via automated nightly ETL, model retraining, and walk-forward back-testing of 50 GB fresh tick data.</li>
-              </ul>
+                <li>• Built a Python/TensorFlow mid-frequency stock-forecasting system (RSRS → GBDT → 4-state Gaussian HMM) on a 10-year, 800+ equity dataset, boosting hit-rate from 52\% to 67\% with $\alpha$ = 8.4\%, Sharpe = 1.6, and capped drawdown at -5.8\%.</li>
+                <li>• Deployed models on a two-node HA Linux cluster via a low-latency trading platform (MATLAB UI, Java backend), achieving <100 ms execution for 1k+ daily orders and cutting reconciliation time by 85\%.</li>
             </li>
 
 
