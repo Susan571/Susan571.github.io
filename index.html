@@ -842,12 +842,16 @@
   <script src="./assets/js/script.js"></script>
   <script>
     function toggleNews(btn) {
-      var items = document.querySelectorAll('.news-hidden');
-      var showing = btn.textContent === 'Show less';
+      var items = document.querySelectorAll('.news-entry.news-hidden, .news-entry.news-show');
+      var expanding = !items[0].classList.contains('news-show');
       items.forEach(function(el) {
-        el.style.display = showing ? 'none' : 'flex';
+        if (expanding) {
+          el.classList.add('news-show');
+        } else {
+          el.classList.remove('news-show');
+        }
       });
-      btn.textContent = showing ? 'Show older news' : 'Show less';
+      btn.textContent = expanding ? 'Show less' : 'Show older news';
     }
   </script>
 

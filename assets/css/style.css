@@ -2002,16 +2002,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .news-timeline {
-  position: relative;
   padding-left: 0;
 }
 
 .news-entry {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  padding: 10px 0;
-  border-bottom: 1px solid hsl(0, 0%, 22%, 0.5);
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid hsla(0, 0%, 22%, 0.5);
 }
 
 .news-entry:last-child {
@@ -2019,16 +2018,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .news-date {
-  flex-shrink: 0;
-  width: 70px;
   font-size: 13px;
   font-weight: var(--fw-500);
   color: var(--orange-yellow-crayola);
-  text-align: right;
+  white-space: nowrap;
+  padding-top: 2px;
 }
 
 .news-hidden {
-  display: none;
+  display: none !important;
+}
+
+.news-show {
+  display: grid !important;
 }
 
 .news-toggle-btn {
