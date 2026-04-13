@@ -1998,16 +1998,55 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .news-title {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.news-list {
-  list-style-type: disc;
-  padding-left: 20px;
+.news-timeline {
+  position: relative;
+  padding-left: 0;
 }
 
-.news-list li::marker {
-  color: var(--white-2);
+.news-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid hsl(0, 0%, 22%, 0.5);
+}
+
+.news-entry:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 70px;
+  font-size: 13px;
+  font-weight: var(--fw-500);
+  color: var(--orange-yellow-crayola);
+  text-align: right;
+}
+
+.news-hidden {
+  display: none;
+}
+
+.news-toggle-btn {
+  display: block;
+  margin: 16px auto 0;
+  padding: 6px 20px;
+  background: transparent;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  color: var(--light-gray-70);
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.news-toggle-btn:hover {
+  color: var(--orange-yellow-crayola);
+  border-color: var(--orange-yellow-crayola);
 }
 
 .timeline-text ul {
@@ -2021,46 +2060,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--white-2);
 }
 
-.news-item {
-  margin-bottom: 15px;
-}
-
-.news-item-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  font-size: var(--fs-4);
-  font-weight: var(--fw-500);
-  color: var(--white-2);
-}
-
-.news-item-title ion-icon {
-  vertical-align: middle;
-  margin-left: 8px;
-  color: var(--orange-yellow-crayola);
-}
-
-.news-content time {
-  font-size: 0.9em;
-  color: var(--light-gray-70);
-  font-weight: var(--fw-300);
-}
-
-.news-text {
-  margin-top: 5px;
+.news-entry .news-text {
+  margin: 0;
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.news-text ion-icon {
-  display: inline-block;
-  flex-shrink: 0;
 }
 
 .paper-link {
