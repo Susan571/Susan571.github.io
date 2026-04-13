@@ -35,13 +35,13 @@
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(250, 60%, 70%) 0%,
-    hsla(250, 60%, 68%, 0) 50%
+    hsl(165, 60%, 55%) 0%,
+    hsla(165, 60%, 53%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg,
-    hsla(250, 60%, 70%, 0.251) 0%,
-    hsla(250, 60%, 68%, 0) 59.86%
+    hsla(165, 60%, 55%, 0.251) 0%,
+    hsla(165, 60%, 53%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -50,8 +50,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right,
-    hsl(250, 60%, 70%),
-    hsl(260, 50%, 65%)
+    hsl(165, 60%, 55%),
+    hsl(175, 50%, 50%)
   );
 
   /* solid */
@@ -63,8 +63,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(165, 60%, 55%);
-  --vegas-gold: hsl(165, 40%, 48%);
+  --orange-yellow-crayola: hsl(210, 70%, 65%);
+  --vegas-gold: hsl(210, 50%, 55%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
