@@ -34,14 +34,14 @@
     hsla(240, 2%, 11%, 0) 100%
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    to bottom right,
+    hsl(250, 60%, 70%) 0%,
+    hsla(250, 60%, 68%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
+    135deg,
+    hsla(250, 60%, 70%, 0.251) 0%,
+    hsla(250, 60%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -49,9 +49,9 @@
     hsla(0, 0%, 25%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
-    to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    to right,
+    hsl(250, 60%, 70%),
+    hsl(260, 50%, 65%)
   );
 
   /* solid */
@@ -63,8 +63,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: hsl(165, 60%, 55%);
+  --vegas-gold: hsl(165, 40%, 48%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -74,7 +74,7 @@
    */
 
   /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-poppins: 'Inter', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -2010,7 +2010,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   grid-template-columns: 75px 1fr;
   gap: 12px;
   padding: 9px 0;
-  border-bottom: 1px solid hsla(0, 0%, 22%, 0.5);
+  border-bottom: none;
 }
 
 .news-entry:last-child {
@@ -2070,6 +2070,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   line-height: 1.6;
 }
 
+.news-entry .news-text strong {
+  color: var(--white-2);
+  font-weight: var(--fw-500);
+}
+
 .paper-link {
   color: var(--orange-yellow-crayola);
   text-decoration: none;
@@ -2082,6 +2087,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 .paper-link:hover {
   color: var(--light-gray);
   transform: translateY(-2px);
+}
+
+.timeline-item-title .paper-link {
+  color: var(--white-2);
+}
+
+.timeline-item-title .paper-link:hover {
+  color: var(--orange-yellow-crayola);
 }
 
 .paper-link::after {
@@ -2193,6 +2206,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 .blog .timeline-item-title {
   font-size: var(--fs-4);
   margin-bottom: 7px;
+}
+
+.blog .timeline-item-title .paper-link {
+  white-space: normal;
 }
 
 .blog .timeline-list span {
