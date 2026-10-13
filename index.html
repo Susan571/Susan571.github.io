@@ -1,785 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xinyue(Susan) Zeng - Personal Homepage</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Xinyue (Susan) Zeng, Virginia Tech Ph.D. candidate, researches self-improving AI agents, reliable LLM reasoning, RL post-training, test-time scaling, and recursive self-improvement (RSI).">
+  <meta name="theme-color" content="#ffffff">
+  <title>Home · Xinyue (Susan) Zeng</title>
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="./assets/js/script.js" defer></script>
 </head>
 
-<body>
 
-  <!--
-    - #MAIN
-  -->
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="./index.html">Xinyue Zeng<span aria-hidden="true">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./index.html" aria-current="page">Home</a><a href="./publications.html">Publications</a><a href="./background.html">Experience</a><a href="./recognition.html">Recognition</a><a href="./index.html#contact">Contact</a></nav>
+      </div>
+  </header>
 
-  <main>
+  
 
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/myself.png" alt="Xinyue Zeng" width="120">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Xinyue Zeng">Xinyue(Susan) Zeng</h1>
-
-          <p class="title">Ph.D Candidate in Computer Science<br>AI Researcher</p>
+<main id="main" class="page-shell" tabindex="-1">
+<section id="about" class="hero" aria-labelledby="name-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">Virginia Tech · Computer Science</p>
+        <h1 id="name-heading">Xinyue Zeng <span>(Susan)</span>
+</h1>
+        <p class="bio">I am a Ph.D. candidate in Computer Science at Virginia Tech, advised by <strong>Prof. Dawei Zhou</strong>. My research focuses on <strong>self-improving AI agents</strong> and <strong>reliable, efficient LLM reasoning</strong>, with an emphasis on learning from experience, RL post-training, and test-time scaling. I am also exploring <strong>recursive self-improvement (RSI)</strong>, particularly how agents can improve the way they learn and adapt.</p>
+<p class="bio">In Summer 2026, I was <strong class="bio-highlight">invited to join Microsoft’s Frontier Tuning AI team as a research intern</strong>, extending my research on test-time inference and hallucination control to long-horizon AI agents. My statistical training spans a <strong>B.S. in Statistics from Zhejiang University</strong> and an <strong>M.S. in Biostatistics from UNC–Chapel Hill</strong>.</p>
+<div class="profile-links" aria-label="Academic and professional profiles">
+          <a href="mailto:xyzeng@vt.edu">Email <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?user=Fs0LV5UAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Susan571" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/xinyue-zeng-844771247/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
       </div>
+      <figure class="hero-portrait">
+        <img src="./assets/images/portrait.webp" alt="Portrait of Xinyue (Susan) Zeng" width="1024" height="1536" fetchpriority="high">
+        <figcaption>Blacksburg, Virginia</figcaption>
+      </figure>
+    </section>
 
-      <div class="sidebar-info_more">
+    
 
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:xyzeng@vt.edu" class="contact-link">xyzeng@vt.edu</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Blacksburg, Virginia, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/xinyue-zeng-844771247/" class="social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=Fs0LV5UAAAAJ&hl=en" class="social-link" target="_blank" style="color: white;">
-              <ion-icon name="school-outline"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/Susan571" class="social-link" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About Me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I am Ph.D. candicate in Computer Science at Virginia Tech, advised by Professor Dawei Zhou. I received my M.S. in Biostatistics from the University of North Carolina at Chapel Hill in 2024, where I was luckily advised by Professor Yun Li, and my B.S. in Statistics from Zhejiang University in 2022 under the supervision of Professor Peng Zhang.
-          </p>
-
-          <p>
-            My research focuses on <span style="color: var(--white-2); font-weight: 500; text-decoration: underline; text-decoration-color: var(--orange-yellow-crayola); text-underline-offset: 3px;">LLM Reasoning</span> and <span style="color: var(--white-2); font-weight: 500; text-decoration: underline; text-decoration-color: var(--orange-yellow-crayola); text-underline-offset: 3px;">Inference</span>, with an emphasis on developing eliability, efficiency and principled evaluation frameworks for <span style="color: var(--white-2); font-weight: 500; text-decoration-color: var(--orange-yellow-crayola); text-underline-offset: 3px;">AI assurance</span>. I am particularly interested in advancing the theoretical and empirical understanding of LLMs to improve their reliability and generalization in real-world applications.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What I'm Focusing</h3>
-
-          <ul class="focus-list">
-
-            <li class="focus-item">
-              <h4 class="h4 focus-item-title">AI Assurance: </h4><p class="focus-item-text">
-                Developed advanced methods to enhance large language models with robust adaptability and precision in open-world settings. [<a href="https://arxiv.org/abs/2505.03793" target="_blank" class="paper-link">LensLLM</a>, <a href="https://arxiv.org/abs/2601.18753" target="_blank" class="paper-link">HalluGuard</a>, <a href="https://arxiv.org/abs/2505.16122" target="_blank" class="paper-link">Plan‑and‑Budget</a>, <a href="https://arxiv.org/abs/2609.30192" target="_blank" class="paper-link">SAGE</a>, <a href="https://arxiv.org/abs/2610.04889" target="_blank" class="paper-link">ForkPilot</a>]
-              </p>
-            </li>
-
-            <li class="focus-item">
-              <h4 class="h4 focus-item-title">Ai4Science: </h4><p class="focus-item-text">
-                Applied ML and statistical modeling to biological data for structure prediction, biomarker discovery, and disease analysis. [<a href="https://arxiv.org/abs/2507.02883" target="_blank" class="paper-link">DISPROTBENCH</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/38826297" target="_blank" class="paper-link">Epic-Unmix</a>]
-              </p>
-            </li>
-
-            <li class="focus-item">
-              <h4 class="h4 focus-item-title">Exploring other areas and welcome collaborations!</h4>
-            </li>
-
+<section class="updates section" aria-labelledby="updates-heading" id="updates">
+      <div class="section-heading compact-heading"><h2 id="updates-heading">Recent updates</h2></div>
+      <ul class="news-list" data-recent-news="">
+        <li>
+<time datetime="2026-10">Oct 2026</time><p>My <strong>first-author paper</strong>, <a href="./publications.html#forkpilot">ForkPilot</a>, developed during my internship with Microsoft’s Frontier Tuning AI team, is now available on arXiv.</p>
+</li>
+        <li>
+<time datetime="2026-09">Sep 2026</time><p><a href="./publications.html#sage">SAGE</a> was accepted to the NeurIPS 2026 main conference.</p>
+</li>
+        <li>
+<time datetime="2026-05">May 2026</time><p>I was <strong>invited to join Microsoft’s Frontier Tuning AI team</strong> as a research intern, extending my research on test-time inference and hallucination control.</p>
+</li>
+          <li>
+<time datetime="2026-03">Mar 2026</time><p>Received the ICLR 2026 Tier One Financial Travel Award for my two accepted papers.</p>
+</li>
+          <li>
+<time datetime="2026-02">Feb 2026</time><p>Featured in the <a href="https://sanghani.cs.vt.edu/news/2026/sanghani-center-student-spotlight--xinyue-zeng-.html" target="_blank" rel="noopener noreferrer">Sanghani Center Student Spotlight</a> and received an ACM CAPWIC Travel Scholarship.</p>
+</li>
+          <li>
+<time datetime="2026-01">Jan 2026</time><p><a href="./publications.html#halluguard">HalluGuard</a> and <a href="./publications.html#plan-and-budget">Plan-and-Budget</a> were accepted to ICLR 2026; research on foundational LLM reasoning was accepted to ACM CAPWIC 2026.</p>
+</li>
+          <li>
+<time datetime="2025-11">Nov 2025</time><p><a href="./publications.html#epic-unmix">EPIC-unmix</a> was published in Genome Biology.</p>
+</li>
           </ul>
+      <details class="news-archive" id="news-archive" data-news-archive="">
+        <summary>Older updates</summary>
+        <ul class="news-list" data-older-news="">
+          <li>
+<time datetime="2025-08">Aug 2025</time><p>Research on foundational LLM fine-tuning was accepted to the ICDM 2025 Ph.D. Forum.</p>
+</li>
+          <li>
+<time datetime="2025-05">May 2025</time><p><a href="./publications.html#lensllm">LENSLLM</a> was accepted to ICML 2025.</p>
+</li>
+        </ul>
+      </details>
+    </section>
+
+    
+
+<nav class="page-shortcuts" aria-label="Explore my research and background">
+  <a href="./publications.html">Publications <span aria-hidden="true">→</span></a>
+  <a href="./background.html">Experience &amp; education <span aria-hidden="true">→</span></a>
+<a href="./recognition.html">Recognition &amp; academic activity <span aria-hidden="true">→</span></a></nav>
+<section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div>
+<p class="eyebrow">Contact</p>
+<h2 id="contact-heading">Research &amp; collaboration</h2>
+<p>I welcome collaborations in self-improving agents, reliable and efficient reasoning, and AI for science.</p>
+</div>
+      <div class="contact-address">
+<a href="mailto:xyzeng@vt.edu">xyzeng@vt.edu <span aria-hidden="true">↗</span></a><p>Virginia Tech · Blacksburg, VA</p>
+</div>
+    </section>
+  
+
+</main>
+<footer class="site-footer page-shell"><p>© 2026 Xinyue (Susan) Zeng</p>
+<a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
 
-        </section>
-
-
-        <!--
-          - News
-        -->
-
-        <section class="News">
-
-          <h3 class="h3 news-title">Latest News</h3>
-
-          <div class="news-timeline">
-
-            <div class="news-entry">
-              <span class="news-date">Sep 2025</span>
-              <p class="news-text">My <strong>first-author paper</strong>, <a href="https://arxiv.org/abs/2610.04889" target="_blank" class="paper-link">ForkPilot</a>, developed during my internship with the Microsoft Frontier Tuning AI team, is now available on arXiv!</p>
-            </div>
-            
-            <div class="news-entry">
-              <span class="news-date">Sep 2025</span>
-              <p class="news-text">One <strong>first-author paper</strong> <a href="https://arxiv.org/abs/2609.30192" target="_blank" class="paper-link">SAGE</a> has been accepted by NeurIPS'26 main conference! See you at Atlanta~</p>
-            </div>
-
-            <div class="news-entry">
-              <span class="news-date">May 2026</span>
-              <p class="news-text">Start as a researcher intern at <span style="color: var(--white-2); font-weight: 500; text-decoration-color: var(--orange-yellow-crayola); text-underline-offset: 3px;">Microsoft Copilot Frontier AI</span>. Honored to be invited to this opportunity to extend my research on test-time inference and hallucination control.</p>
-            </div>
-            
-            <div class="news-entry">
-              <span class="news-date">Mar 2026</span>
-              <p class="news-text">Honored to receive the <strong>ICLR 2026 Tier One Financial Travel Award</strong> in recognition of my two accepted papers.</p>
-            </div>
-
-            <div class="news-entry">
-              <span class="news-date">Feb 2026</span>
-              <p class="news-text">Honored to be selected as <strong>Student Spotlight</strong> by Sanghani Center for AI & Data Analytics.</p>
-            </div>
-
-            <div class="news-entry">
-              <span class="news-date">Feb 2026</span>
-              <p class="news-text">Honored to be selected as one of twenty recipients of Travel Scholarship by ACM CAPWIC.</p>
-            </div>
-
-            <div class="news-entry">
-              <span class="news-date">Jan 2026</span>
-              <p class="news-text">My research about foundational LLM reasoning was accepted by ACM CAPWIC'26, see you in Alexandria~</p>
-            </div>
-
-            <div class="news-entry">
-              <span class="news-date">Jan 2026</span>
-              <p class="news-text">Two <strong>first-author papers</strong> (one leading-author: <a href="https://arxiv.org/abs/2601.18753" target="_blank" class="paper-link">HalluGuard</a>, one co-first: <a href="https://arxiv.org/abs/2505.16122" target="_blank" class="paper-link">Plan-and-Budget</a>) were accepted by ICLR'26 main conference! See you in Brazil~</p>
-            </div>
-
-            <div class="news-entry news-hidden">
-              <span class="news-date">Nov 2025</span>
-              <p class="news-text">One paper <a href="https://pubmed.ncbi.nlm.nih.gov/38826297" target="_blank" class="paper-link">Epic-Unmix</a> was accepted by Genome Biology!</p>
-            </div>
-
-            <div class="news-entry news-hidden">
-              <span class="news-date">Aug 2025</span>
-              <p class="news-text">My research about foundational LLM fine-tuning was accepted by ICDM'25 PhD forum, see you in D.C.~</p>
-            </div>
-
-            <div class="news-entry news-hidden">
-              <span class="news-date">May 2025</span>
-              <p class="news-text">My <strong>first leading paper</strong> <a href="https://arxiv.org/abs/2505.03793" target="_blank" class="paper-link">LensLLM</a> has been accepted by ICML'25 main conference!</p>
-            </div>
-
-          </div>
-
-          <button class="news-toggle-btn" onclick="toggleNews(this)">Show older news</button>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Virginia Tech</h4>
-              <span>2024 - Present</span>
-              <p class="timeline-text">
-                College of Engineering<br>
-                PhD candidate in Computer Science
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">University of North Carolina at Chapel Hill</h4>
-              <span>2022 - 2024</span>
-              <p class="timeline-text">
-                Gillings School of Public Health<br>
-                Master of Science in Biostatistics
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Zhejiang University</h4>
-              <span>2018 - 2022</span>
-              <p class="timeline-text">
-                School of Mathematical Sciences<br>
-                Bachelor of Science in Statistics
-              </p>
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Research Intern</h4>
-              <span>May 2026 - Aug 2026</span>
-              <p class="timeline-text">
-                Microsoft, Redmond, USA
-              </p>
-              <ul class="timeline-text">
-                <li>• Lead research on RL-based post-training and test-time search to improve the reliability and efficiency of LLMs in agentic Copilot systems, while designing and developing tool-augmented LLM agent pipelines in live environments to enable multi-LLM collaboration and long-horizon tool-use workflows.</li>
-              </ul>
-            </li>
-            
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Graduate Research Assistant</h4>
-              <span>Aug 2024 - Present</span>
-              <p class="timeline-text">-
-                Computer Science, Virginia Tech, Blacksburg, USA
-              </p>
-              <ul class="timeline-text">
-                <li>• Developed scalable methods to improve the reliability and efficiency of frontier AI systems, with a focus on hallucination mitigation, uncertainty quantification, and adaptive test-time efficiency-advancing the theoretical and empirical foundations of assured, efficient, and trustworthy large language models in real-world deployments.</li>
-              </ul>
-            </li>
-
-
-          </ol>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PUBLICATIONS
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Publications</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Publications</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/abs/2610.04889" target="_blank" class="paper-link">ForkPilot: Self-Evolving Policy for Retrospective Search in Long-Horizon Agents</a> 
-              </h4>
-              <p class="timeline-text">
-                <strong>Xinyue Zeng</strong>, Shivam Shandilya, Guilherme Potje, Leonardo Nunes, Rakshanda Agarwal, Ranveer Chandra, Emre Kiciman, Dawei Zhou, Tusher Chakraborty<br>
-                Preprint'26
-              </p>
-            </li>
-            
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/abs/2609.30192" target="_blank" class="paper-link">SAGE: Mitigating Long-Horizon Reasoning Biases via Topological Guidance</a> 
-              </h4>
-              <p class="timeline-text">
-                <strong>Xinyue Zeng</strong>, Jiawei Zhang, Yujun Yan, Dawei Zhou<br>
-                NeurIPS 2026
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/abs/2601.18753" target="_blank" class="paper-link">HalluGuard: Demystifying Data-Driven and Reasoning-Driven Hallucinations in LLMs</a>
-              </h4>
-              <p class="timeline-text">
-                <strong>Xinyue Zeng*</strong>, Junhong Lin*, Yujun Yan, Feng Gao, Liang Shi, Jun Wu, Dawei Zhou<br>
-                ICLR 2026
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/pdf/2505.16122" target="_blank" class="paper-link">Plan and Budget: Effective and Efficient Test-Time Scaling on Large Language Model Reasoning</a>
-              </h4>
-              <p class="timeline-text">
-                <strong>Xinyue Zeng*</strong>, Junhong Lin*, Jie Zhu, Song Wang, Julian Shun, Jun Wu, Dawei Zhou (*Equal Contribution)<br>
-                ICLR 2026
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/abs/2505.03793" target="_blank" class="paper-link">LENSLLM: Unveiling Fine-Tuning Dynamics for LLM Selection</a>
-              </h4>
-              <p class="timeline-text">
-                <strong>Xinyue Zeng</strong>, Haohui Wang, Junhong Lin, Jun Wu, Tyler Cody, Dawei Zhou<br>
-                ICML 2025
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/pdf/2507.02883" target="_blank" class="paper-link">DISPROTBENCH: A Disorder-Aware, Task-Rich Benchmark for Evaluating Protein Structure Prediction in Realistic Biological Contexts</a>
-              </h4>
-              <p class="timeline-text">
-                <strong>Xinyue Zeng</strong>, Tuo Wang, Adithya Kulkarni, Alexander Lu, Alexandra Ni, Phoebe Xing, Junhan Zhao, Siwei Chen, Dawei Zhou<br>
-                Preprint'25
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/abs/2505.03793" target="_blank" class="paper-link">DiagnoLLM: A Hybrid Bayesian Neural Language Framework for Interpretable Disease Diagnosis</a>
-              </h4>
-              <p class="timeline-text">
-                Bowen Xu*, <strong>Xinyue Zeng*</strong>, Jiazhen Hu, Tuo Wang, Adithya Kulkarni (*Equal Contribution)<br>
-                Preprint'25
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://arxiv.org/abs/2505.04651" target="_blank" class="paper-link">Scientific Hypothesis Generation and Validation: Methods, Datasets, and Future Directions</a>
-              </h4>
-              <p class="timeline-text">
-                Adithya Kulkarni, Fatimah Alotaibi, <strong>Xinyue Zeng</strong>, Longfeng Wu, Tong Zeng, Barry Menglong Yao, Minqian Liu, Shuaicheng Zhang, Lifu Huang, Dawei Zhou<br>
-                Preprint'25
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/38826297" target="_blank" class="paper-link">Cell-type specific inference from bulk RNA-sequencing data by integrating single cell reference profiles via EPIC-unmix</a>
-              </h4>
-              <p class="timeline-text">
-                Chenwei Tang, Quan Sun, <strong>Xinyue Zeng</strong>, Xiaoyu Yang, Fei Liu, Jinying Zhao, Yin Shen, Bixiang Liu, Jia Wen, Yun Li<br>
-                Genome Biology
-              </p>
-            </li>
-            
-          </ol>
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <!-- Awards Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Awards & Honors</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Patent Award</h4>
-              <span>2026</span>
-              <p class="timeline-text">
-                Microsoft Frontier Tuning AI
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Tier One Financial Travel Award</h4>
-              <span>2025 - 2026</span>
-              <p class="timeline-text">
-                ICLR'26
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <a href="https://sanghani.cs.vt.edu/news/2026/sanghani-center-student-spotlight--xinyue-zeng-.html" target="_blank" class="paper-link">Student Spotlight</a>
-              </h4>
-              <span>2025 - 2026</span>
-              <p class="timeline-text">
-                Sanghani Center for AI & Data Analytics
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Travel Scholarship</h4>
-              <span>2025 - 2026</span>
-              <p class="timeline-text">
-                ACM CAPWIC
-              </p>
-            </li>
-
-            
-          </ol>
-        </section>
-
-        <!-- Presentations Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="mic-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Presentations</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">SAGE: Mitigating Long-Horizon Reasoning Biases via Topological Guidance</h4>
-              <p class="timeline-text">
-                The Fortieth Annual Conference on Neural Information Processing Systems(NeurIPS 2026)
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">HalluGuard: Demystifying Data-Driven and Reasoning-Driven Hallucinations in LLMs</h4>
-              <p class="timeline-text">
-                Fourteenth International Conference on Learning Representations(ICLR 2026)
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Plan and Budget: Effective and Efficient Test-Time Scaling on Large Language Model Reasoning</h4>
-              <p class="timeline-text">
-                Fourteenth International Conference on Learning Representations(ICLR 2026)
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Foundational LLM Reasoning and Inference</h4>
-              <p class="timeline-text">
-              ACM CAPWIC 2026
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Foundational LLM Fine-tuning</h4>
-              <p class="timeline-text">
-                International Conference on Data Mining (ICDM) PhD Forum 2025
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">LENSLLM: Unveiling Fine-Tuning Dynamics for LLM Selection</h4>
-              <p class="timeline-text">
-                Forty-Second International Conference on Machine Learning (ICML 2025)
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Gaussian-Process-Based Cell Type Specific Unmixing of Bulk Expression Profiles</h4>
-              <p class="timeline-text">
-                ENAR 2024 Spring Meeting
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Talks Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Invited Talks</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Invited Talk for HalluGuard</h4>
-              <span>Apr 2026</span>
-              <p class="timeline-text">
-                NICE AI
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Invited Talk for LensLLM</h4>
-              <span>Oct 2025</span>
-              <p class="timeline-text">
-                Cerebras AI
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Invited Talk for LensLLM</h4>
-              <span>Oct 2025</span>
-              <p class="timeline-text">
-                PLOUTOS AI
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Guest Lecture: CS 4824</h4>
-              <span>March 2025</span>
-              <p class="timeline-text">
-                Virginia Tech
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Service Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="shield-checkmark-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Services</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Reviewer</h4>
-              <p class="timeline-text">
-                TMLR, Journal of Applied Mathematics, ICLR 2026, ICML 2026(Golden Reviewer), KDD 2026, NeurIPS 2026, AAAI 2026, ICLR 2027
-              </p>
-            </li>
-          </ol>
-        </section>
-        
-        <!-- Copyrights Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="shield-checkmark-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Copyrights</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Statistical Analysis Platform</h4>
-              <span>2023</span>
-              <p class="timeline-text">
-                Software Copyright in China
-              </p>
-            </li>
-          </ol>
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.1234567890123!2d-80.4175!3d37.2296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884d956974b11409%3A0x9d5c1b7e1a1b3d3e!2sVirginia%20Tech!5e0!3m2!1sen!2sus!4v1647608789441!5m2!1sen!2sus"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="https://formsubmit.co/susanefforts@gmail.com" method="POST" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-        
-            <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
-        
-            <input type="hidden" name="_subject" value="New submission from your Portfolio Contact Form!">
-        
-            <button class="form-btn" type="submit" data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-  <script>
-    function toggleNews(btn) {
-      var items = document.querySelectorAll('.news-entry.news-hidden, .news-entry.news-show');
-      var expanding = !items[0].classList.contains('news-show');
-      items.forEach(function(el) {
-        if (expanding) {
-          el.classList.add('news-show');
-        } else {
-          el.classList.remove('news-show');
-        }
-      });
-      btn.textContent = expanding ? 'Show less' : 'Show older news';
-    }
-  </script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-
 </html>
+

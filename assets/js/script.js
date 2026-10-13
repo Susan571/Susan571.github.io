@@ -1,205 +1,56 @@
 'use strict';
 
-// element toggle function
-const elementToggleFunc = function (elem) {
-  // Add a check to ensure elem is not null before trying to access classList
-  if (elem) {
-    elem.classList.toggle("active");
+// Keep the news window current without inventing days for month-only dates.
+function organizeNewsByAge(referenceDate) {
+  const section = document.getElementById('updates');
+  if (!section) return;
+  const recent = section.querySelector('[data-recent-news]');
+  const archive = section.querySelector('[data-news-archive]');
+  const older = section.querySelector('[data-older-news]');
+  if (!recent || !archive || !older) return;
+  const now = referenceDate || new Date();
+  const cutoff = String(now.getFullYear() - 1) + '-' + String(now.getMonth() + 1).padStart(2, '0');
+  const entries = Array.from(section.querySelectorAll('.news-list > li'));
+  function monthOf(entry) {
+    const time = entry.querySelector('time[datetime]');
+    return time ? time.getAttribute('datetime').slice(0, 7) : '';
   }
-};
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-// Add null check for sidebarBtn as well, though it's usually present
-if (sidebar && sidebarBtn) {
-  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-}
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  // Ensure modalContainer and overlay exist before toggling class
-  if (modalContainer && overlay) {
-    modalContainer.classList.toggle("active");
-    overlay.classList.toggle("active");
-  }
-};
-
-// Add click event to all modal items only if they exist
-if (testimonialsItem.length > 0 && modalContainer && modalImg && modalTitle && modalText) {
-  for (let i = 0; i < testimonialsItem.length; i++) {
-    testimonialsItem[i].addEventListener("click", function () {
-      // Add checks for querySelector results within the item
-      const avatar = this.querySelector("[data-testimonials-avatar]");
-      const title = this.querySelector("[data-testimonials-title]");
-      const text = this.querySelector("[data-testimonials-text]");
-
-      if (avatar) {
-        modalImg.src = avatar.src;
-        modalImg.alt = avatar.alt;
-      }
-      if (title) {
-        modalTitle.innerHTML = title.innerHTML;
-      }
-      if (text) {
-        modalText.innerHTML = text.innerHTML;
-      }
-      testimonialsModalFunc();
-    });
-  }
-}
-
-// Add click event to modal close button and overlay only if they exist
-if (modalCloseBtn) {
-  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-}
-if (overlay) {
-  overlay.addEventListener("click", testimonialsModalFunc);
-}
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]"); // HTML has data-selecct-value (double c)
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-if (select) { // Check if select element exists
-  select.addEventListener("click", function () { elementToggleFunc(this); });
-
-  // add event in all select items
-  for (let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener("click", function () {
-      let selectedValueText = this.innerText;
-      let selectedValue = selectedValueText.toLowerCase();
-      if (selectValue) {
-        selectValue.innerText = selectedValueText;
-      }
-      elementToggleFunc(select); // 'select' is 'this' from the outer scope, already checked
-      filterFunc(selectedValue);
-    });
-  }
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-// MODIFIED filterFunc
-const filterFunc = function (selectedValue) { // selectedValue is already lowercase, e.g., "open-world llms"
-  if (filterItems.length > 0) {
-    for (let i = 0; i < filterItems.length; i++) {
-      const itemCategory = filterItems[i].dataset.category; // Get the category from data-attribute, e.g., "Open-world LLMs"
-
-      if (selectedValue === "all") {
-        filterItems[i].classList.add("active");
-      } else if (itemCategory && selectedValue === itemCategory.toLowerCase()) {
-        // ^^^ Ensure itemCategory exists and compare its lowercase version with selectedValue
-        filterItems[i].classList.add("active");
-      } else {
-        filterItems[i].classList.remove("active");
-      }
-    }
-  }
-};
-
-// add event in all filter button items for large screen
-if (filterBtn.length > 0) { // Check if filter buttons exist
-  let lastClickedBtn = filterBtn[0]; // Assuming at least one button if length > 0
-
-  for (let i = 0; i < filterBtn.length; i++) {
-    filterBtn[i].addEventListener("click", function () {
-      let selectedValueText = this.innerText;
-      let selectedValue = selectedValueText.toLowerCase();
-      if (selectValue) { // selectValue might be null if 'data-select' was not found
-        selectValue.innerText = selectedValueText;
-      }
-      filterFunc(selectedValue);
-
-      if (lastClickedBtn) {
-        lastClickedBtn.classList.remove("active");
-      }
-      this.classList.add("active");
-      lastClickedBtn = this;
-    });
-  }
-}
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field only if form exists
-if (form && formInputs.length > 0 && formBtn) { // Check if form and its components exist
-  for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", function () {
-      // check form validation
-      if (form.checkValidity()) {
-        formBtn.removeAttribute("disabled");
-      } else {
-        formBtn.setAttribute("disabled", "");
-      }
-    });
-  }
-}
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// --- MODIFIED Page Navigation Logic ---
-if (navigationLinks.length > 0 && pages.length > 0) {
-  navigationLinks.forEach(link => {
-    link.addEventListener("click", function () {
-      const clickedLink = this;
-      const targetPageName = clickedLink.innerHTML.toLowerCase().trim();
-
-      // 1. Remove 'active' class from ALL navigation links
-      navigationLinks.forEach(navLink => {
-        navLink.classList.remove("active");
-      });
-
-      // 2. Remove 'active' class from ALL pages
-      pages.forEach(page => {
-        page.classList.remove("active");
-      });
-
-      // 3. Add 'active' class to the CLICKED navigation link
-      clickedLink.classList.add("active");
-
-      // 4. Add 'active' class to the CORRESPONDING page
-      let pageFound = false;
-      pages.forEach(page => {
-        // Special handling for "Publications" (previously "Blog")
-        if (targetPageName === "publications" && page.dataset.page === "blog") {
-          page.classList.add("active");
-          pageFound = true;
-        } else if (page.dataset.page === targetPageName) {
-          page.classList.add("active");
-          pageFound = true;
-        }
-      });
-
-      if (!pageFound) {
-        console.warn(`Debug: Page with data-page="${targetPageName}" not found.`);
-      }
-
-      window.scrollTo(0, 0);
-    });
+  entries.sort(function (a, b) { return monthOf(b).localeCompare(monthOf(a)); });
+  entries.forEach(function (entry) {
+    const month = monthOf(entry);
+    if (/^\d{4}-(0[1-9]|1[0-2])$/.test(month) && month < cutoff) older.append(entry);
+    else recent.append(entry);
   });
-} else {
-  if (navigationLinks.length === 0) console.warn("Debug: No navigation links found with [data-nav-link]. Page navigation will not work.");
-  if (pages.length === 0) console.warn("Debug: No pages found with [data-page]. Page navigation will not work.");
+  archive.hidden = older.children.length === 0;
 }
+
+// Each page is a real HTML document; navigation works without JavaScript.
+// Only deep links into native disclosures need this small enhancement.
+function revealAnchorTarget(hash) {
+  if (!hash || hash === '#') return null;
+  let id;
+  try { id = decodeURIComponent(hash.slice(1)); }
+  catch { return null; }
+  const target = document.getElementById(id);
+  if (!target) return null;
+  let parent = target.parentElement;
+  while (parent) {
+    if (parent.tagName === 'DETAILS') parent.open = true;
+    parent = parent.parentElement;
+  }
+  if (target.tagName === 'DETAILS') target.open = true;
+  return target;
+}
+
+function followHash() {
+  const target = revealAnchorTarget(window.location.hash);
+  if (target) requestAnimationFrame(function () { target.scrollIntoView(); });
+}
+
+document.addEventListener('click', function (event) {
+  const link = event.target.closest('a[href^="#"]');
+  if (link) revealAnchorTarget(link.getAttribute('href'));
+});
+window.addEventListener('hashchange', followHash);
+organizeNewsByAge();
+if (window.location.hash) followHash();
